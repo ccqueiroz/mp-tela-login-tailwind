@@ -1,0 +1,14 @@
+{
+  "name": "desafio-tela-de-login",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Caio Queiroz",
+  "license": "MIT",
+  "scripts": {
+    "tailwind:init": "npx tailwindcss init",
+    "tailwind:build": "npx tailwindcss -i ./input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
