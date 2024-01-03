@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./dist/output.css" rel="stylesheet">
+        <title>Tela de Login</title>
+    </head>
+    <body class="relative">
+        <div id="login-page" class="bg-primary-black w-screen h-screen">
+            <div id="wrapper-login" 
+                class="w-screen h-screen max-w-screen-2xl lg:w-full xl:w-10/12 mx-auto flex justify-center 
+                        relative bg-cover bg-no-repeat bg-clip-padding bg-top bg-blend-hard-light
+                        rounded-2xl relative shadow-custom-inner after:block after:absolute after:inset-0
+                        after:bg-overlay-hero-image after:shadow-custom-overlay-inner" 
+                style="background-image: url('./assets/vecteezy_cenico-nascer-do-sol-dentro-a-alto-montanhas-do-a-alpes_22334850.jpg');"
+            >
+                <div id="content-form" 
+                    class="w-full lg:w-1/2 h-screen pl-0 xl:pl-28 flex flex-col items-center justify-center absolute
+                            z-10 left-0 bg-primary-black shadow-custon-form-left"
+                >
+                    <div id="content-title-page" 
+                        class="w-fit flex justify-center relative after:content-* after:absolute after:w-2.5 after:h-2.5
+                                after:bg-gradient-primary after:bottom-2 after:-right-4 after:rounded-full after:animate-dotTitle"
+                    >
+                        <h1 class="font-DmSans text-primary font-bold text-4xl md:text-5xl animate-pageTitle">
+                            Faça seu login
+                        </h1>
+                    </div>
+                    <form id="form" 
+                        class="w-10/12 max-w-limit-form xl:w-9/12 lg:w-9/12 md:w-1/2 mt-12 mb-8 flex flex-col items-center justify-center gap-y-5"
+                        onsubmit="login(); return false;"
+                    >
+                        <div id="email-field" class="w-full flex flex-col">
+                            <label for="email" class="font-DmSans text-primary antialiased mb-1 ml-1">E-mail</label>
+                            <div id="content-email-field" class="w-full h-fit relative transition-all ease-in-out duration-100 focus-within:before:content-* 
+                                        focus-within:before:absolute focus-within:before:inset-0 focus-within:before:-z-1 
+                                        focus-within:before:bg-gradient-primary p-px focus-within:before:rounded-lg"
+                            >
+                                <div class="w-full h-10 bg-input-default flex relative rounded-lg 
+                                            transition-all ease-in-out duration-100 focus-within:shadow-neon-effect-input pl-3"
+                                >   
+                                    <div class="w-7 h-7 text-gray-500 absolute top-2/4 -translate-y-2/4">
+                                        <svg 
+                                            data-name="email-picture"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            xml:space="preserve"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            viewBox="0 0 20 20"
+                                        >
+                                            <g>
+                                                <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"/>
+                                                <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <input id="email" 
+                                        class="w-full h-10 ml-6 bg-transparent outline-0 rounded-lg caret-white px-3 font-DmSans text-primary"
+                                        autocomplete="off"
+                                    />
+                                </div>
+                            </div>
+                            <div id="span-error-email" class="opacity-0">
+                                <span class="text-sm text-red-600 ml-2"></span>
+                            </div>
+                        </div>
+                        <div id="password-field" class="w-full flex flex-col">
+                            <label for="password" class="font-DmSans text-primary antialiased mb-1 ml-1">Senha</label>
+                            <div id="content-password-field" class="w-full h-fit relative transition-all ease-in-out duration-100 focus-within:before:content-* 
+                                        focus-within:before:absolute focus-within:before:inset-0 focus-within:before:-z-1 
+                                        focus-within:before:bg-gradient-primary p-px focus-within:before:rounded-lg"
+                            >
+                                <div class="w-full h-10 bg-input-default flex relative rounded-lg 
+                                            transition-all ease-in-out duration-100 focus-within:shadow-neon-effect-input"
+                                >   
+                                    <div id="show-password-login" class="w-7 h-7 text-gray-500 absolute right-3 top-2/4 -translate-y-2/4 cursor-pointer" onclick="showPassword(this)">
+                                        <svg 
+                                            data-name="password-locked-picture"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            xml:space="preserve"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            viewBox="0 0 256 256"
+                                        >
+                                            <g>
+                                                <path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80Zm-72,78.63V184a8,8,0,0,1-16,0V158.63a24,24,0,1,1,16,0ZM160,80H96V56a32,32,0,0,1,64,0Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <input id="password"
+                                        type="password"
+                                        class="w-full h-10 mr-8 bg-transparent outline-0 rounded-lg caret-white px-3 font-DmSans text-primary"
+                                    />
+                                </div>
+                            </div>
+                            <div id="span-error-password" class="opacity-0">
+                                <span class="text-sm text-red-600 ml-2"></span>
+                            </div>
+                        </div>
+                        <div id="forgot-password" class="w-full flex justify-end">
+                            <span class="font-DmSans mr-2 text-primary text-sm cursor-pointer underline opacity-45 transition-opacity 
+                                        ease-in-out duration-200 hover:opacity-75"
+                            >
+                                Esqueci minha senha
+                            </span>
+                        </div>
+                        <div id="button-submit" 
+                            class="w-full max-w-limit-form xl:w-9/12 lg:w-9/12 flex justify-center mt-3"
+                        >
+                            <button id="btn-login" type="submit" class="w-full h-12 rounded-xl bg-gradient-primary font-DmSans text-primary font-bold 
+                                        text-xl font-medium tracking-wide transition-shadow ease-in-out duration-300 hover:shadow-neon-effect-input"
+                            >
+                                Entrar
+                            </button>
+                        </div>
+                        <div id="not-have-account" class="w-full flex justify-center mt-1">
+                            <span class="font-DmSans text-primary text-sm cursor-pointer underline opacity-45 transition-opacity ease-in-out 
+                                        duration-200 hover:opacity-75"
+                            >
+                                <a href="./create-account.html">Ainda não tenho uma conta</a>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="src/login/main.js"></script>
+    <script type="module" src="src/utils/main.js"></script>
+</html>
